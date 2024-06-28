@@ -52,8 +52,20 @@ table {
   border-spacing: 0;
 }
 
-*, ::before, ::after {
+a {
+  text-decoration: none;
+}
+
+*,
+::before,
+::after {
   box-sizing: border-box;
+}
+
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(7%) sepia(52%)
+    saturate(783%) hue-rotate(210deg) brightness(97%) contrast(96%);
 }
 
 html {
@@ -63,6 +75,30 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+}
+
+.icon {
+  filter: var(--icon-color);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
 }
 
 .col, .row[class*=row-cols-] > *,
@@ -842,6 +878,87 @@ body {
     --grid-gutter-x: 30px;
     --grid-gutter-y: 30px;
   }
+}
+.header {
+  background: #eeeeee;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.navbar {
+  margin-left: 144px;
+}
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.navbar-link {
+  display: flex;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46; /* 146.667% */
+}
+
+.top-atc {
+  display: flex;
+  margin-left: 310px;
+  gap: 20px;
+  align-items: center;
+}
+.top-atc__group {
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  min-width: 50px;
+  height: 50px;
+}
+.top-atc__group-1 {
+  padding: 13px;
+}
+.top-atc__group-2 {
+  padding: 10px 20px;
+}
+.top-atc__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.top-atc__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46; /* 146.667% */
+}
+.top-atc__separate {
+  width: 1px;
+  height: 30px;
+  background: #ededf6;
+}
+.top-atc__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: block;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.45; /* 145.455% */
 }
 
 /*# sourceMappingURL=main.css.map */
